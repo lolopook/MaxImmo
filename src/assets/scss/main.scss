@@ -1,0 +1,880 @@
+@import "partials/colors", "partials/font", "partials/mixin","partials/mediaQuery";
+
+
+body {
+    color: #e2e2e2;
+    font-family: 'Khula', sans-serif;
+    // background-color: black;
+
+    // la navigation
+    nav {
+        color: $navyBlue; 
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        max-width: 1311px;
+        margin: 0 auto;
+        padding: 22px 0;
+
+        .logoNavBtn {
+            display: flex;
+            flex-direction: row;
+            
+            .logoEnseigne {
+                display: flex;
+                align-items: center;
+
+                margin-right: 80px;
+            }
+
+            // les menus des pages avec les liens
+            #linkPagesMedia {
+                display: none;
+            }
+
+            .menuBurG {
+                display: none;
+                .menuBurger {
+                    display: none;
+                }
+    
+                .menuCross {
+                    display: none;
+                }
+            }
+            
+            
+
+            .linkPages {
+                display: flex;
+                align-items: center;
+                
+                .link {
+                    .linkAcceuil {
+
+                        padding: 1px 10px;
+                        display: flex;
+                        align-items: center;
+                        padding-bottom: 0.5em;
+                        text-decoration: none;
+    
+                        color: $navyBlue;
+                        background-image: url(../imgs/Active\ Pointer.png);
+                        background-repeat: no-repeat;
+                        background-position: bottom center;
+                    }
+
+                    .linkCatalog, .linkContact
+                    {
+                        
+                        padding: 1px 10px;
+                        display: flex;
+                        align-items: center;
+    
+                        color: $neutralGrey3;
+    
+                        text-decoration: none;
+    
+                    
+    
+                        // le pseudo trait en dessous de la selection
+                        &:hover {
+                            
+                            color: $navyBlue;
+                            padding-top: 0.5em;
+    
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
+
+
+        // le rapelle de la nav
+        .recall {
+            @include nunito;
+            @include BtnJauneOeufOutilne;
+        
+            
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                color: $primaryYellowOmlette;
+            }  
+            
+            &:hover{
+                font-style: normal;
+                background-color: $primaryYellowOmlette;
+                display: flex;
+                a {
+                    color: white;
+                }
+                
+            }
+        }
+        
+    }
+
+    // premier section avec photo et commentaire.
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        box-shadow: 0 7px 40px $neutralGrey3;
+        border-radius: 10px 10px 4px 4px;
+
+        max-width: 1311px;
+        margin: 0 auto;
+
+        //concerne l'image du font du titre
+        .imageTitle {
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-image: url("/src/assets/imgs/backgroundTitle.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            height: 497px;
+
+            // text en dessous du titre
+            .titleText {
+                width: 40%;
+
+                h2 {
+                    font-weight: 700;
+                    font-size: 44px;
+                    line-height: 70px;
+                }
+
+                p {
+                    @include nunito;
+                    font-weight: 400;
+                }
+
+                .color {
+                    color: $secondaryBlueSky;
+                }
+            }
+
+            // commentaire de title.
+            .comments {
+                width: 40%;
+
+                .containerCom {
+                    margin: 10%;
+
+                    .comStartPict {
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+
+                        position: relative;
+
+                        translate: -20% 0;
+                        width: 500px;
+                        height: 350px;
+
+                        // position des coms et photos
+                        .pictOne {
+                            position: absolute;
+                            top: 0px;
+                            left: 275px;
+                        }
+
+                        // design des "bulles" et effet blur
+                        .textTwo {
+                            position: absolute;
+                            top: 60px;
+                            left: 70px;
+                            @include blur;
+                            border-radius: 6px;
+                            width: 68%;
+                            height: 72px;
+                        }
+
+                        .textMaxime>p {
+                            position: absolute;
+                            top: 65px;
+                            left: 85px;
+
+                            @include nunito;
+                            color: $neutralWhite;
+
+                        }
+
+                        .pictTwo {
+                            position: absolute;
+                            width: 110px;
+                            height: 28px;
+
+                            top: 30px;
+                            left: 85px;
+
+                            p {
+                                font-size: 14px;
+                                text-align: center;
+                                color: $primaryYellowOmlette;
+                                background-color: $greydark;
+                                padding: 5px;
+                                border-radius: 6px;
+                            }
+                        }
+
+                        .pictThree {
+                            position: absolute;
+                            top: 100px;
+                            left: -5px;
+                        }
+
+                        .pictFour {
+                            position: absolute;
+                            top: 110px;
+                            left: 380px;
+                        }
+
+                        .ytCom {
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+
+                            position: absolute;
+                            top: 180px;
+                            left: 30px;
+
+                            width: 250px;
+                            height: 50px;
+                            border-radius: 4px;
+                            padding: 10px 10px;
+
+                            @include blur;
+
+                            p {
+                                margin: auto;
+                                @include nunito
+                            }
+
+                            .play {
+                                position: absolute;
+                                left: 250px;
+
+                                cursor: pointer;
+                            }
+
+                        }
+
+                        .pictFive {
+                            position: absolute;
+                            bottom: 50px;
+                            right: 130px;
+                        }
+
+                        .starTwo {
+                            img 
+                            {
+                                padding: 30px;
+                                position: absolute;
+                                bottom : 0px; left :110px;
+                            }
+                            .containerStar 
+                            {
+
+                                p {
+                                    font-size: 14px;
+                                    color: $primaryYellowOmlette;
+                                    background-color: $greydark;
+                                    padding: 5px 15px;
+                                    border-radius: 6px;
+
+                                    position: absolute;
+                                    bottom : 40px; left :170px;
+                                }
+
+                            
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        // debut de design du formulaire
+        .search {
+            @include nunito;
+            font-weight: 700;
+            width: 100%;
+            border-radius: 0 0 4px 4px;
+
+            text-align: center;
+
+            form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 0 0 4px 4px;
+
+                margin-top: 16px;
+                margin-bottom: 16px;
+
+                font-size: 18px;
+
+                .searchCase {
+                    width: 32%;
+                    color: $neutralGrey3;
+                    background-color: $neutrailGrey4;
+                    border-radius: 0 0 4px 4px;
+                    padding: 20px 10px;
+
+                    border-radius: 8px;
+                    margin: 0 8px;
+
+                    input {
+                        border: none;
+                        background-color: $neutrailGrey4;
+
+                        width: 200px;
+                        margin-left: 5px;
+
+                        font-size: 16px;
+                        outline: none;
+                    }
+                    select {
+                        border: none;
+                        background-color: $neutrailGrey4;
+                        color: $greydark;
+                        padding: 0 30px;
+
+                        margin-left: 5px;
+
+                        font-size: 16px;
+
+                    }
+
+                    i {
+                        color: $navyBlue;
+                    }
+                }
+
+                //button submit btn
+                .btnSubmit {
+                    
+
+                    align-items: center;
+
+                    color: $neutralGrey3;
+                    background-color: $primaryYellowOmlette;
+
+                    padding: 20px 10px;
+                    border-radius: 8px;
+
+                    width: 32%;
+
+                    margin: 5px 8px;
+
+                    cursor: pointer;
+                    button {
+                        font-size: 16px;
+                        @include nunito;
+                        
+                        
+                        border: none;
+                        background-color: $primaryYellowOmlette;
+                        color: $neutralWhite;
+                    }
+                }
+            }
+        }
+    }
+
+    //section partenaire
+    .partenaire {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+
+        padding-top: 100px;
+        margin: 0 auto;
+        max-width: 1311px;
+
+
+        .nosPartenaires {
+            position: relative;
+
+            width: 29%;
+            color: black;
+
+            display: flex;
+            flex-direction: column;
+
+            max-height: 560px;
+            h2 {
+
+                font-size: 36px;
+                font-weight: 800;
+
+                background-image: url(../imgs/PatternPartnair.png);
+                background-repeat: no-repeat;
+                background-position: 70px;
+                background-size: 220px 20px;
+
+                margin-bottom: 0;
+
+            }
+
+            p {
+                @include nunito;
+                color: $greydark;
+
+                line-height: 170%;
+                font-weight: 300;
+                font-size: 20px;
+
+                width: 400px;
+
+                margin-bottom: 55px;
+            }
+
+            .pictPartnerOne {
+                height: 387px;
+                .hashTagText {
+                    position: absolute;
+                    z-index: 3000;
+    
+                    bottom: 0px;
+                    height: 80px;
+    
+                    display: flex;
+    
+                    @include blur;
+                    img {
+                        width: 10%;
+                        height: 50%;
+                        padding-left: 7%;
+                        padding-right: 3%;
+                        padding-top: 2%
+                        
+                    }
+                    
+                    >p {
+                        @include nunito;
+
+                        font-style: italic;
+                        font-weight: 500;
+                        color: #FFFFFF;
+                        width: 70%;
+                        
+                    }
+                }
+            }
+
+        }
+
+        .maStory 
+        {
+            width: 69%;
+            color: $greydark;
+            height: 270px;
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+
+            img {
+                width: 203px;
+                height: 270px;
+
+                margin-right: 3%;
+            }
+
+            .textMaStory {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-image: url(../imgs/Line-separator-maStory.png);
+                background-repeat: no-repeat;
+                background-position: 15% 4%;
+
+                @include nunito;
+                font-weight: 700;
+
+                    .textblue {
+                        padding-left: 2%;
+                        margin: 0;
+                        color: #79DCF2;
+                    }
+
+                    h2 {
+                        @include khula;
+                        font-weight: 700;
+                        font-size: 36px;
+                        margin: 0;
+                        color: $greydark;
+                    }
+
+                    p {
+                    
+                        margin: 0;
+                        font-size: 20px;
+
+                        @include nunito;
+                        color: $greydark;
+                    }
+
+                    .iconeMaStory {
+                        height: 40px;
+                        width: 100%;
+
+                        display: flex;
+                        align-items: flex-start;
+
+                        .maStoryIcone {
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+
+                            width: 48%;
+                            
+                            padding-top: 40px;
+                            img {
+                                width: 38px;
+                                height: 38px;
+                            }
+
+                            .explainIcone {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+
+                                p {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+            }
+        }
+    }
+
+
+    //section card Service. 
+    .sectionService {
+        color: $greydark;
+        background-color: $neutralGrey5;
+        // max-width: 1311px;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-bottom: 60px;
+        height: 600px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .titleService > h2{
+            @include khula;
+            font-weight: 600;
+            width: 345px;
+            text-align: center;
+            font-size: 30px;
+            margin-top: -10px;
+        }
+        .containerRowCard {
+            height: 60%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: start;
+
+                .cardContainer {
+                    height: 100%;
+                    background-color: #ffffff;
+                    width: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    text-align: center;
+                    border-radius: 5px;
+                    padding: 20px 10px 10px;
+                    margin: 20px;
+        
+                    i {
+                        font-size: 2em;
+                        color: #FFFFFF;
+                        background-color: $navyBlue;
+                        padding: 18px 16px;
+                        border-radius: 50%;
+                    }
+                    .titleCard {
+                        font-size: 20px;
+                        @include nunito;
+                        font-weight: 700;
+                        margin: 0;
+                        padding-top: 16px;
+                    }
+                    
+                    .cardText {
+                        
+                        font-size: 16px;
+                        margin-top: 0px;
+                    }
+        
+                    .cardBtn {
+                        @include BtnJauneOeufOutilne;
+                        background-color: #FFFFFF;
+
+                        cursor: pointer;
+                    }
+
+                    #iconeContract {
+                        padding: 20px 24px;
+                    }
+                }
+
+                #selectCardMidle {
+                    border-bottom: 3px solid $primaryYellowOmlette;
+                }
+        }
+    }
+
+    //section newsletter
+    .newsLetter {
+        max-width: 1131px;
+        height: 200px;
+        background-color: $navyBlue;
+        margin-top: 60px;
+        margin-right: auto;
+        margin-left: auto;
+        
+        display: flex;
+        justify-content: space-around;
+        
+        border-radius: 5px;
+
+        .newsLetterContainer {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include khula;
+            font-weight: 700;
+            font-size: 24px;
+            color: #FFFFFF;
+
+            h3{
+                margin: 0;
+                padding-right: 50px;
+            } 
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: 16px;
+                @include khula;
+                font-weight: 300px !important;
+            }
+        }
+
+        .InputNewsLetter {
+            display: flex;
+            input {
+                padding: 10px 50px 10px 25px;
+                border: none;
+            }
+            button {
+                color: #ffffff;
+                cursor: pointer;
+                background-color: #ffa800;
+                border: none;
+                padding: 10px 30px 10px 30px;
+            }
+        }
+    }
+
+    // section pied de page
+    .avisClientContainer {
+        display: flex;
+        flex-direction: row;
+        max-width: 1511px;
+
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 80px;
+
+        
+        .containerAgent {
+            width: 1000px;
+            position: relative;
+            .imageAgent {
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: 1000px;
+                left: -200px;
+                z-index: -1;
+
+                img {
+                    padding: 20px;
+                }
+
+                .middle {
+                    opacity: 0.5;
+                    height: 389px;
+                    width: 291px;
+                }
+
+                .top {
+                    top: 0px;
+                    left: 30px;
+                    opacity: 1;
+                    height: 511px;
+                    width: 400px;
+                    object-fit: contain;
+                }
+
+                .one, .two, .three {
+                    opacity: 0.5;
+                    height: 389px;
+                    width: 291px;
+                    object-fit: cover;
+                    filter: blur(2px);
+                }
+            }
+            .arrowCarousel {
+                position: absolute;
+                top: 480px;
+                left: 200px;
+                font-size: 3rem;
+                padding: 10px;
+
+                #arrowRight, #arrowLeft {
+                    padding: 0 10px;
+                }
+                :hover {
+                    transform: scale(1.50);
+                    color: $navyBlue;
+                    transition: 500ms;
+                }
+            }
+        }
+
+        .sectionAvisTitleText {
+            color: black;
+
+            .titleColorContainer {
+                display: flex;
+                flex-direction: column;
+
+                position: relative;
+
+                .titleblue {
+                    @include nunito;
+                    font-weight: 400;
+                    padding-left: 2%;
+                    margin: 0;
+                    color: #79DCF2;
+
+                    position: absolute;
+                    left: 0px;
+
+                    width: 200px;
+
+                    background-image: url(../imgs/Line-separator-maStory.png);
+                    background-repeat: no-repeat;
+                    background-position: 100px 25px;
+
+                }
+
+                .aviscollect {
+                    @include nunito;
+                    position: absolute;
+                    left: 0px;
+                    top: 20px;
+
+                    font-size: 1.5em;
+                    width: 300px;
+                    
+                }
+
+                .quoteRight {
+                    position: relative;
+                    color: rgb(82, 169, 82);
+                    font-size: 3.5rem;
+        
+                    left: 150px;
+                    top: 140px;
+                    z-index: 10;
+                }
+            }
+        }
+        
+
+        .commentscontainer {
+            height: 100%;
+            
+            position: relative;
+            color: black;
+            width: 50%;
+            
+            right: 190px;
+            
+
+            .textCardCommentAgent {
+                position: absolute;
+                padding: 20px;
+                box-shadow: 0px 20px 50px rgb(190, 190, 190);
+
+                top: 170px;
+                left: -80px;
+
+                width: 430px;
+
+                z-index: 3;
+                background-color: white;
+
+                font-weight: 300;
+
+                .textOne {
+                    @include nunito;
+                    font-weight: 700;
+                    p {
+                        font-weight: 200;
+                        color: grey;
+                    }
+                }
+                .commentsAdam {
+                    .firstname {
+                        font-weight: 600;
+                    }
+
+                    .startNoteComments {
+                        font-size: 14px;
+                        color: $primaryYellowOmlette;
+                        padding: 5px 15px;
+                        border-radius: 6px;
+
+                        position: absolute;
+                        bottom : 75px; left :250px;
+                    }
+                }
+            }
+        }
+    }
+}

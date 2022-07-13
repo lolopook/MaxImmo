@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- les relation scss et fontawesome -->
+    <link rel="stylesheet" href="./assets/scss/main.scss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+    <title>Maximmo</title>
+</head>
+<body>
+    <!-- navigation nav bar et logo -->
+    <nav>
+        <div class="logoNavBtn">
+
+            <div class="logoEnseigne">
+                <img src="./assets/imgs/Logo Mark.png" alt="le logo de maximmo">
+                <h1>Maximmo</h1>
+            </div>
+
+            <div class="linkPages">
+                <div class="link">
+                    <a href="#" class="linkAcceuil">Acceuil</a>
+                </div>
+                <div class="link">
+                    <a href="#" class="linkCatalog">Catalogue</a>
+                </div>
+                <div class="link">
+                    <a href="#" class="linkContact">Contactez-moi</a>
+                </div>
+            </div>
+            
+            <div class="linkPagesMedia" id="linkPagesMedia" >
+                <div class="link">  
+                    <a href="#" class="linkAcceuil">Acceuil</a> 
+                </div>
+                <div class="link">
+                    <a href="#" class="linkCatalog">Catalogue</a>
+                </div>
+                <div class="link">
+                    <a href="#" class="linkContact">Contactez-moi</a>
+                </div>
+                <div class="link"> 
+                    <a href="#">Se faire rappeler</a>
+                </div>
+            </div>
+
+            <div class="menuBurG">
+                <div  id="menuBurger">
+                    <i class="fa-solid fa-bars" class="menuBurger"></i>
+                </div>
+    
+                <div class="menuCross" id="menuCross">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+        </div>
+  
+        <div class="recall">
+            <a href="#">Se faire rappeler</a>
+        </div> 
+    </nav>
+
+    <!-- image et title  -->
+    <section>
+        
+        <div class="imageTitle">
+            <div class="titleText">
+                <h2>
+                    <span class="color">Trouvez le bien</span>
+                    <br>
+                    qui vous correspond
+                </h2>
+                <p>
+                    A vos côtés depuis 2012, je vous accompagne dans vos projets immobiliers.
+                </p>
+    
+            </div>
+            <!-- section de commentaire -->
+            <div class="comments">
+                <div class="containerCom">
+                    <div class="comStartPict">
+                        <div class="pictOne">
+                            <img src="./assets/imgs/Form Elements/Avatar 4.png" alt="#">
+                        </div>
+                        <div class="textTwo">
+                           
+                        </div>
+                        <div class="textMaxime">
+                            <p>Maxime est le plus grand professionnel du moment</p>
+                        </div>
+                        <div class="pictTwo">
+                            <p class="star">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                        <div class="pictThree">
+                            <img src="./assets/imgs/Form Elements/Avatar12.png" alt="#">
+                        </div>
+                        <div class="pictFour">
+                            <img src="./assets/imgs/Form Elements/Avatar15.png" alt="#">
+                        </div>
+                        <div class="ytCom">
+                            <img src="./assets/imgs/Form Elements/Avatar 5.png" alt="#">
+                            <p>Un grand merci à <br>l’équipe MaxImmo</p>
+                            <img class="play" src="./assets/imgs/Button/Large Icon.png" alt="#">
+                        </div>
+                        <div class="pictFive">
+                            <img src="./assets/imgs/Form Elements/Avatar.png" alt="#">
+                        </div>
+                        <div class="starTwo">
+                            <div class="containerStar">
+                                <p class="star">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                            <img src="./assets/imgs/Form Elements/Avatar-1.png" alt="#">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- formulaire pour trouver le bien -->
+        <div class="search">
+            <form action="#!">
+                
+                <label for="searchKey" class="searchCase">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Rechercher par mot clé" name="#" id="searchKey">
+                </label>    
+
+                <div class="searchCase">
+                    <i class="fa-solid fa-house"></i>
+                    <select type="select" placeholder="Type de bien" name="#">
+                        <option value="">Type de bien</option>
+                        <option value="">Appart</option>
+                        <option value="">Maison</option>
+                    </select>
+                </div>
+
+                <label for="searchLoc" class="searchCase">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" placeholder="Localisation recherchée" name="#" >
+                </label>
+
+                <div class="btnSubmit">
+                    <button type="submit">Trouvez un bien</button>
+                </div>
+                        
+            </form>
+        </div>
+    </section>
+
+    <!-- section partenaire -->
+    <div class="partenaire">
+
+        <div class="nosPartenaires">
+            <h2>Nos partenaires</h2>
+            <p>
+                Nous sommes agréés avec les plus grandes agences immobilières de la région
+            </p>
+            <div class="pictPartnerOne">
+                <img class="heroPict" src="./assets/imgs/Hero Pict.png" alt="#">
+                <div class="hashTagText">
+                    <img class="hastTagImage" src="./assets/imgs/hashT.png" alt="#">
+                    <p class="hastTText">Vous cherchez la perle rare, nous trouvons pour vous</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- section ma story -->
+        <div class="maStory">
+            <img src="./assets/imgs/Hero Pict2.png" alt="#">
+            <div class="textMaStory">
+                <p class="textblue">Ma story</p>
+                <h2>Le moyen le plus simple et le plus rapide pour trouver</h2>
+                <p>Créée en 2012, l’agence MaxImmo est maintenant reconnue dans toute la région Grande-Aquitaine et régions voisines.</p>
+                <div class="iconeMaStory">
+                    <div class="maStoryIcone">
+                        <img src="./assets/imgs/Icon engrenange.png" alt="">
+                        <div class="explainIcone">
+                            <p class="title5">Fiabilité</p>
+                            <p>Un sens du service inégalé</p>
+                        </div>
+                    </div>
+                    <div class="maStoryIcone">
+                        <img src="./assets/imgs/efficacité.png" alt="">
+                        <div class="explainIcone">
+                            <p class="title5">Fiabilité</p>
+                            <p>Un sens du service inégalé</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+        <!-- section des card // tous les services -->
+    <div class="sectionService">
+        <div class="titleService">
+            <h2>
+                Tous les services <br> que nous proposons
+            </h2>
+        </div>
+
+        <div class="containerRowCard">
+
+            <div class="cardContainer">
+
+                <i class="fa-solid fa-house-circle-check"></i>
+                <p class="titleCard">
+                    Acheter
+                </p>
+                <p class="cardText">
+                    Trouvez le bien qui vous correspond, nous vous conseillons et proposons des produits respectant vos demandes et conditions.
+                </p>
+                <button class="cardBtn">
+                    Trouver un bien
+                </button>
+    
+            </div>
+
+            <div class="cardContainer" id="selectCardMidle">
+
+                <i class="fa-solid fa-house-chimney-window"></i>                <p class="titleCard">
+                    Vendre
+                </p>
+                <p class="cardText">
+                    Trouvez le bien qui vous correspond, nous vous conseillons et proposons des produits respectant vos demandes et conditions.
+                </p>
+                <button class="cardBtn">
+                    Trouver un bien
+                </button>
+    
+            </div>
+
+            <div class="cardContainer">
+
+                <i id="iconeContract" class="fa-solid fa-file-contract"></i>                <p class="titleCard">
+                    Louer
+                </p>
+                <p class="cardText">
+                    Trouvez le bien qui vous correspond, nous vous conseillons et proposons des produits respectant vos demandes et conditions.
+                </p>
+                <button class="cardBtn">
+                    Trouver un bien
+                </button>
+    
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- news letter -->
+    <div class="newsLetter">
+        <div class="newsLetterContainer">
+            <div class="titleTextNews">
+                <h3>Estimez votre bien immobilier</h3>
+                <p>Commencez par entrer votre adresse email</p>
+            </div>
+            <div class="InputNewsLetter">
+                <input type="text" placeholder="Votre adresse élétronique">
+                <button type="submit">Estimation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Avis Client -->
+    <div class="avisClientContainer">
+
+        <div class="containerAgent">
+
+            <div class="imageAgent">
+
+                    <img id="pict1" class="one" src="./assets/imgs/ImgTeam3.png">
+                
+                    <img id="pict2" class="one" src="./assets/imgs/ImgTeam2.png">
+                
+                    <img id="pict3" class="top" src="./assets/imgs/ImgTeam1.png">
+
+            </div>
+    
+            <div class="arrowCarousel">
+                <span id="arrowLeft"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                <span id="arrowRight"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+            </div>
+            
+        </div>
+
+        <div class="sectionAvisTitleText">
+            <div class="titleColorContainer">
+
+                <div class="titleblue">
+                    <p class="textblue">Avis clients</p>
+                </div>
+                <div class="aviscollect">
+                    <h3>Ce que les clients pensent de moi</h3>
+                </div>
+                
+                <div class="quoteRight">
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="commentscontainer">
+            
+            <div class="textCardCommentAgent">
+                <div class="textOne">
+                    <span>le compromis parfait</span>
+                    <p>
+                        Maxime a su répondre à nos attentes, trouver le produit qui nous convenait, et a parfaitement 
+                        répondu à notre budget, c’est L’AGENT immobilier du moment !
+                    </p>
+                </div>
+                <div class="commentsAdam">
+                    <div class="firstname">
+                        <p>Adam Dupont</p>
+                    </div>
+                    <div class="startNoteComments">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <p>Acquéreur d’une maison de 110m² à Tarbes</p>
+            </div>
+
+        </div>
+    
+    </div>
+
+    <!-- script js avec le type -->
+    <script src="./assets/js/app.js" type="module"></script>
+
+</body>
+</html>

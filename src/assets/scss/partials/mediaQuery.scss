@@ -1,0 +1,138 @@
+@media screen and (min-width: 811px) {
+    .linkPagesMedia {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    body {
+        nav {
+            display: flex;
+            .logoNavBtn {
+                
+                position : relative;
+                width: 100%;
+                height: 100%;
+                margin: 0 10%;
+
+                .logoEnseigne {
+                    margin-right: 40px;
+                }
+                
+                .linkPages {
+                    display: none !important;
+                }
+
+                .menuBurG {
+                    display: block !important;
+                    
+                    #menuBurger {
+                        display: flex;
+                        position: absolute;
+                        align-items: center;
+                        margin: 20px;
+                        font-size: 30px;
+    
+                        left: 90%;
+                    }
+    
+                    .menuCross {
+                        display: flex;
+                        position: absolute;
+                        align-items: center;
+                        margin: 20px;
+                        font-size: 30px;
+    
+                        left: 91%;
+                    }
+    
+                    .linkPagesMedia {
+    
+                        background-color: white;
+                        width: 80%;
+                        text-align: center;
+                        position: absolute;
+    
+                        top: 30%;
+                        left: 30%;
+    
+                        border-radius: 10px;
+                        box-shadow: 0 7px 40px $neutralGrey3;
+    
+                        .link {
+                            padding-top: 20px;
+                            padding-bottom: 20px;
+                        }
+                        .link a{
+                            color: $navyBlue;
+                            
+                            text-decoration: none;
+                            &:hover {
+                                border-bottom: solid 1px $navyBlue;
+                            }
+                        }
+                    }
+                }
+                
+            }
+
+            .recall {
+                display: none;
+            }
+        }
+        section {
+            .imageTitle {
+                .titleText {
+                    width: 80% !important;
+                    h2 {
+                        font-size: 34px !important;
+                    }
+                }
+                .comments {
+                    display: none;
+                }
+            }
+            
+            .search {
+                width: 90%;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    .searchCase {
+                        border: solid 1px $navyBlue;
+                        width: 90% !important;
+                        margin: 10px !important;
+                    }
+                    .btnSubmit {
+                        width: 90% !important;
+                    }
+                }
+            }
+        }
+        .partenaire {
+            display: flex;
+            flex-direction: column !important;
+            justify-content: center;
+            align-items: center;
+
+            .nosPartenaires {
+                width: 100% !important;
+
+                .pictPartnerOne {
+                    width: 100%;
+                    .hashTagText {
+                        width: 70% !important;
+                        }
+                }
+            }
+
+            .maStory {
+                display: flex;
+                flex-direction: column !important;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
+}

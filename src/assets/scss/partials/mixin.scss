@@ -1,0 +1,28 @@
+@mixin nunito {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+}
+
+@mixin blur {
+    backdrop-filter: grayscale(30%);
+    backdrop-filter: blur(14px);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+@mixin khula {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+}
+
+@mixin BtnJauneOeufOutilne {
+    font-weight: 600;
+    font-style: normal;
+    color: $primaryYellowOmlette;
+
+    padding: 13px 50px;
+    text-align: center;
+    max-width: 185px;
+
+    border: solid 1px $primaryYellowOmlette;
+    border-radius: 4px;
+}
