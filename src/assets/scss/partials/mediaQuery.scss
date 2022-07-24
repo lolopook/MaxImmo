@@ -6,6 +6,9 @@
 
 @media screen and (max-width: 810px) {
     body {
+        margin: 0;
+        width: 90%;
+        margin: 0 5%;
         nav {
             display: flex;
             .logoNavBtn {
@@ -81,15 +84,36 @@
             }
         }
         section {
+            width: 100% !important;
+            margin: 0 5%;
             .imageTitle {
+                width: 100%;
+                margin-left: 5%;
+                margin-right: 5%;
+                height: 100vh !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 .titleText {
                     width: 80% !important;
                     h2 {
+                        margin: 0;
                         font-size: 34px !important;
                     }
                 }
                 .comments {
-                    display: none;
+                    margin: 0 10%;
+                    width: 80% !important;
+                    .containerCom {
+                        margin: 0 !important;
+                        .comStartPict {
+                            width: 340px !important;
+                            .pictFour {
+                                left: 300px !important;
+                            }
+                        }
+                    }
                 }
             }
             
@@ -110,6 +134,7 @@
             }
         }
         .partenaire {
+            height: 100% !important;
             display: flex;
             flex-direction: column !important;
             justify-content: center;
@@ -119,9 +144,17 @@
                 width: 100% !important;
 
                 .pictPartnerOne {
-                    width: 100%;
+                    width: 100% !important;
+                    .heroPict {
+                        width: 80%;
+                        margin:0 10%;
+                    }
                     .hashTagText {
-                        width: 70% !important;
+                        width: 80% !important;
+                        margin-left: 10%;
+                        p {
+                            font-size: 0,5rem;
+                        }
                         }
                 }
             }
@@ -131,7 +164,39 @@
                 flex-direction: column !important;
                 justify-content: center;
                 align-items: center;
-                width: 100%;
+                margin: 0px;
+                padding: 0;
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+        .sectionService {
+            height: 100% !important;
+            .containerRowCard {
+                flex-direction: column !important;
+            }
+        }
+
+        .newsLetter {
+            margin: 20% 0  0!important;
+            padding: 10%;
+            height: 100% !important;
+            .newsLetterContainer {
+                display: flex !important;
+                flex-direction: column;
+                .titleTextNews {
+                    padding: 10% 0;
+                    display: block;
+                }
+            }
+        }  
+
+
+        .avisClientContainer {
+            display: none;
+
+            .containerAgent {
+                display: none;
             }
         }
     }

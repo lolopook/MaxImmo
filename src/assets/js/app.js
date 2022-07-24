@@ -63,15 +63,15 @@ function right() {
         pictOne.classList.remove("one");
         pictOne.classList.add("two");
     }
-    else if (pictOne.classList == "two") {
+    else if (pictOne.classList == "two") { 
         pictOne.src = pictTwoSource;
         pictTwo.src = pictThreeSource;
         pictThree.src = pictOneSource;
         pictOne.classList.remove("two");
-        pictOne.classList.add("three");
+        pictOne.classList.add("three");  
     }
     else if (pictOne.classList == "three"){
-        pictOne.src = pictOneSource;
+        pictOne.src = pictOneSource; 
         pictTwo.src = pictTwoSource;
         pictThree.src = pictThreeSource;
         pictOne.classList.remove("three");
@@ -83,8 +83,8 @@ function left() {
     if (pictOne.classList == "one") {
         pictOne.src = pictTwoSource;
         pictTwo.src = pictThreeSource;
-        pictThree.src = pictOneSource;
-        pictOne.classList.remove("one");
+        pictThree.src = pictOneSource; 
+        pictOne.classList.remove("one"); 
         pictOne.classList.add("three");
     }
     else if (pictOne.classList == "three") {

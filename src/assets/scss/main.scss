@@ -644,8 +644,7 @@ body {
                         padding: 20px 24px;
                     }
                 }
-
-                #selectCardMidle {
+                .cardContainer:hover {
                     border-bottom: 3px solid $primaryYellowOmlette;
                 }
         }
